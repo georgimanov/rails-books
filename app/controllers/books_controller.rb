@@ -11,7 +11,7 @@ class BooksController < ApplicationController
     end
 
     @all_genres = Book.all_genres
-    @selected_genres = params[:genre]|| {}
+    @selected_genres = params[:genres]|| {}
     if @selected_genres == {}
       @selected_genres = Hash[@all_genres.map {|genre| [genre, genre]}]
     end

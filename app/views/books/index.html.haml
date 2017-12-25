@@ -7,7 +7,7 @@
 = form_tag books_path, :method => :get do
   %b Genres:
   - @all_genres.each do |genre|
-    = check_box_tag "genre[#{genre}]"
+    = check_box_tag "genres[#{genre}]"
     = genre
   = submit_tag 'Selected only'
 <hr/>
