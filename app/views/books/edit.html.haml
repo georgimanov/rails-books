@@ -1,8 +1,11 @@
-%h2 Create New Book
+%h2 Edit Book
+
 <hr />
-= link_to 'Back', books_path
+= link_to 'Book details', book_path(@book)
+= link_to 'Back to books', books_path
 <hr />
-= form_tag books_path, :method => :post do
+
+= form_tag book_path(@book), :method => :put do
 
   = label :book, :title, 'Title'
   = text_field :book, :title
