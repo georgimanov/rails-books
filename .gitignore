@@ -25,3 +25,5 @@
 # Ignore ruby mine
 /.idea
 .idea/
+
+Gemfile
