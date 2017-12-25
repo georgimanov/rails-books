@@ -1,0 +1,18 @@
+%h2 Details about #{@book.title}
+<hr />
+= link_to 'Back to books list', books_path
+<hr />
+%ul#details
+  %li
+    Genre:
+    = @book.genre
+  %li
+    Publish Date:
+    = @book.publish_date.strftime("%B %d, %Y")
+
+  %li
+    ISBN:
+    = @book.isbn_number
+
+  %h3 Description:
+  %p#description= @book.description

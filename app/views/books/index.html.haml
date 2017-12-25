@@ -1,0 +1,18 @@
+%h1 All Book
+
+%table#movies
+  %thead
+    %tr
+      %th Title
+      %th Genre
+      %th ISBN
+      %th Publish date
+      %th More Info
+  %tbody
+    - @books.each do |book|
+      %tr
+        %td= book.title
+        %td= book.genre
+        %td= book.isbn_number
+        %td= book.publish_date.strftime("%B %d, %Y")
+        %td= link_to "Details", book_path(book)
