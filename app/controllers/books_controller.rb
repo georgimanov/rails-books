@@ -10,7 +10,12 @@ class BooksController < ApplicationController
       ordering,@date_header = {:publish_date => :asc}, 'hilite'
     end
 
-    @books = Book.order(ordering)
+    @all_genres = Book.all_genres
+    @selected_genres = params[:genre]|| {}
+    if @selected_genres == {}
+      @selected_genres = Hash[@all_genres.map {|genre| [genre, genre]}]
+    end
+    @books = Book.where(genre: @selected_genres.keys).order(ordering)
   end
 
   def show

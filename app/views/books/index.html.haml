@@ -2,6 +2,14 @@
 
 <hr/>
 = link_to 'Add book', new_book_path
+= link_to 'View all books', books_path
+<hr />
+= form_tag books_path, :method => :get do
+  %b Genres:
+  - @all_genres.each do |genre|
+    = check_box_tag "genre[#{genre}]"
+    = genre
+  = submit_tag 'Selected only'
 <hr/>
 %table#books
   %thead
