@@ -2,7 +2,7 @@
 
 # Routes
 |HTTP Verb|Path|Controller#Action|Used for|
-|---|---|---|---|---|
+|---|---|---|---|
 |GET|/books|books#index|display a list of all books|
 |GET|/books/new|books#new|return an HTML form for creating a new book|
 |POST|/books|books#create|create a new book|
