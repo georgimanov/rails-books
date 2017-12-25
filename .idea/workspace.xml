@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60a608c-efd0-4310-903a-6b37f4cee4ed" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/books/edit.html.haml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/books_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/books_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/views/books/index.html.haml" afterPath="$PROJECT_DIR$/app/views/books/index.html.haml" />
-      <change beforePath="$PROJECT_DIR$/app/views/books/new.html.haml" afterPath="$PROJECT_DIR$/app/views/books/new.html.haml" />
-      <change beforePath="$PROJECT_DIR$/app/views/books/show.html.haml" afterPath="$PROJECT_DIR$/app/views/books/show.html.haml" />
-    </list>
+    <list default="true" id="f60a608c-efd0-4310-903a-6b37f4cee4ed" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -287,12 +280,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1514214807527</updated>
-      <workItem from="1514214808995" duration="5934000" />
+      <workItem from="1514214808995" duration="6436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5934000" />
+    <option name="totallyTimeSpent" value="6436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
