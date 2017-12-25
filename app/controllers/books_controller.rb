@@ -14,11 +14,11 @@ class BooksController < ApplicationController
   end
 
   def create
-   params.require(:book)
-   permitted = params[:book].permit(:title,:genre,:publish_date,:isbn_number,:description)
-   @book = Book.create!(permitted)
-   flash[:notice] = "#{@book.title} was successfully created."
-   redirect_to books_path
+    params.require(:book)
+    permitted = params[:book].permit(:title,:genre,:publish_date,:isbn_number,:description)
+    @book = Book.create!(permitted)
+    flash[:notice] = "#{@book.title} was successfully created."
+    redirect_to books_path
   end
 
   def edit
