@@ -1,7 +1,16 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all
+    sort = params[:sort]
+
+    case sort
+    when 'title'
+      ordering,@title_header = {:title => :asc}, 'hilite'
+    when 'publish_date'
+      ordering,@date_header = {:publish_date => :asc}, 'hilite'
+    end
+
+    @books = Book.order(ordering)
   end
 
   def show
