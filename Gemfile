@@ -39,7 +39,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'pg'
 end
 
 group :development do
@@ -53,9 +52,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml'
 
-ruby '2.3.0'
+#2.3.0
+ruby '2.4.3'
 
 group :production do
-	gem 'pg'
 	gem 'rails_12factor'
 end
