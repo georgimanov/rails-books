@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60a608c-efd0-4310-903a-6b37f4cee4ed" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/books.iml" afterPath="$PROJECT_DIR$/.idea/books.iml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile - local" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock - local" afterPath="" />
-    </list>
+    <list default="true" id="f60a608c-efd0-4310-903a-6b37f4cee4ed" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -293,12 +288,12 @@
       <workItem from="1514214808995" duration="7260000" />
       <workItem from="1514226131174" duration="257000" />
       <workItem from="1514226411187" duration="8015000" />
-      <workItem from="1514633980273" duration="803000" />
+      <workItem from="1514633980273" duration="1021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16335000" />
+    <option name="totallyTimeSpent" value="16553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
