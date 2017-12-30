@@ -24,10 +24,10 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
-  database: books-development
+  database: books-test
   pool: 5
   username: postgres
   password: admin
@@ -35,7 +35,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: books-development
+  database: books-production
   pool: 5
   username: postgres
   password: admin
+cucumber:
+  <<: *test
