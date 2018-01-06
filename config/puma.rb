@@ -1,4 +1,4 @@
-=begin
+
 
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
@@ -57,8 +57,8 @@ environment ENV.fetch("RAILS_ENV") {"development"}
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
 
-=end
 
+=begin
 workers Integer(ENV['WEB_CONCURRENCY'] || 2)
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
@@ -74,3 +74,4 @@ on_worker_boot do
   # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
   ActiveRecord::Base.establish_connection
 end
+=end
