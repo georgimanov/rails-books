@@ -10,8 +10,6 @@ class BooksController < ApplicationController
         ordering,@date_header = {:publish_date => :asc}, 'hilite'
     end
 
-    permitted = params.require(:genres).permit(:title, :publish_date)
-
     @all_genres = Book.all_genres
     @selected_genres = params[:genres] || session[:genres] || {}
     if @selected_genres == {}
