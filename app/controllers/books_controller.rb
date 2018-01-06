@@ -18,7 +18,7 @@ class BooksController < ApplicationController
 
     if params[:sort] != session[:sort] or params[:genres] != session[:genres]
       session[:sort] = sort
-      redirect_to :sort => sort, :ratings => @selected_genres and return
+      redirect_to :sort => sort, :genres => @selected_genres and return
     end
 
     @books = Book.where(genre: @selected_genres.keys).order(ordering)
