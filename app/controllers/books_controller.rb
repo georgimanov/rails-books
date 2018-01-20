@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    sort = params[:sort] || session[:sort]
+    sort = params[:sort] #|| session[:sort]
 
     case sort
       when 'title'
@@ -11,14 +11,14 @@ class BooksController < ApplicationController
     end
 
     @all_genres = Book.all_genres
-    @selected_genres = params[:genres] || session[:genres] || {}
+    @selected_genres = params[:genres] || {} #begin|| session[:genres] || {}
     if @selected_genres == {}
       @selected_genres = Hash[@all_genres.map{|genre| [genre, genre]}]
-    end
+    # end
 
-    if params[:sort] != session[:sort] or params[:genres] != session[:genres]
-      session[:sort] = sort
-      redirect_to :sort => sort, :genres => @selected_genres and return
+    # if params[:sort] != session[:sort] or params[:genres] != session[:genres]
+    # session[:sort] = sort
+    # redirect_to :sort => sort, :genres => @selected_genres and return
     end
 
     @books = Book.where(genre: @selected_genres.keys).order(ordering)
@@ -37,9 +37,14 @@ class BooksController < ApplicationController
   def create
     params.require(:book)
     permitted = params[:book].permit(:title,:genre,:publish_date,:isbn_number,:description)
-    @book = Book.create!(permitted)
-    flash[:notice] = "#{@book.title} was successfully created."
-    redirect_to books_path
+    @book = Book.new(permitted)
+    if @book.save
+      flash[:notice] = "#{@book.title} was successfully created."
+      redirect_to books_path
+    else
+      render 'new'
+    end
+
   end
 
   def edit
@@ -50,9 +55,13 @@ class BooksController < ApplicationController
     @book = Book.find params[:id]
     params.require(:book)
     permitted = params[:book].permit(:title,:genre,:publish_date,:isbn_number,:description)
-    @book.update_attributes!(permitted)
-    flash[:notice] = "#{@book.title} was successfully updated."
-    redirect_to book_path(@book)
+    if @book.update_attributes(permitted)
+      flash[:notice] = "#{@book.title} was successfully updated."
+      redirect_to book_path(@book)
+    else
+      render 'edit'
+    end
+
   end
 
   def destroy
