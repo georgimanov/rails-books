@@ -6,6 +6,10 @@ module NavigationHelpers
       '/'
 	when /^the MyFavouriteBooks home page/ 
       '/books'
+  when /^the edit page for "([^"]+)"$/
+    edit_book_path(Book.find_by_title($1).id)
+  when /^the details page for "(.*)"/
+    book_path(Book.find_by_title $1)
 	when /^the Create New Book page/
       '/books/new'
     else
