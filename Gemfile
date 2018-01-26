@@ -32,8 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'haml'
-#2.3.0
-ruby '2.4.3'
+ruby '2.3.0'
+#ruby '2.4.3'
 
 gem 'pg'
 
@@ -59,6 +59,7 @@ group :test do
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions  
   gem 'database_cleaner' # to clear Cucumber's test database between runs
   gem 'launchy'          # a useful debugging aid for user stories
+  gem 'rspec-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
